@@ -12,10 +12,16 @@ import '@vitepress-demo-preview/component/dist/style.css'
 import './index.css'
 import 'bin-ui-design/dist/styles/index.css'
 
+import 'bin-grid-layout/_styles/default.css'
+
 export default {
   ...DefaultTheme,
-  enhanceApp({ app }) {
-    app.use(BinUI, { disabledDoc: true })
+  async enhanceApp({ app }) {
+    if (!import.meta.env.SSR) {
+      const plugin = await import('bin-ui-design')
+      app.use(plugin.default, { disabledDoc: true })
+    }
+
     app.use(BinGridLayout)
     app.component(DisplayLayout.name, DisplayLayout)
     app.component(GridLayoutProps.name, GridLayoutProps)

@@ -16,27 +16,14 @@ const columns = [
 ]
 
 const data = [
-  { eventName: 'layoutCreated', params: '(newLayout)=>{}', desc: '对应Vue生命周期的created' },
+  { eventName: 'move', params: '(i, newX, newY)=>{}', desc: '移动时的事件' },
+  { eventName: 'resize', params: '(i, newH, newW, newHPx, newWPx)=>{}', desc: '调整大小时的事件' },
+  { eventName: 'moved', params: '(i, newX, newY)=>{}', desc: '移动后的事件' },
+  { eventName: 'resized', params: '(i, newH, newW, newHPx, newWPx)=>{}', desc: '调整大小后的事件' },
   {
-    eventName: 'layoutBeforeMount',
-    params: '(newLayout)=>{}',
-    desc: '对应Vue生命周期的beforeMount'
-  },
-  { eventName: 'layoutMounted', params: '(newLayout)=>{}', desc: '对应Vue生命周期的mounted' },
-  {
-    eventName: 'layoutReady',
-    params: '(newLayout)=>{}',
-    desc: '当完成mount中的所有操作时生成的事件'
-  },
-  {
-    eventName: 'layoutUpdated',
-    params: '(newLayout)=>{}',
-    desc: '布局updated事件，更新事件（布局更新或栅格元素的位置重新计算）'
-  },
-  {
-    eventName: 'breakpointChanged',
-    params: '(newBreakpoint, newLayout)=>{}',
-    desc: '断点更改事件，每次断点值由于窗口调整大小而改变'
+    eventName: 'containerResized',
+    params: '(i, newH, newW, newHPx, newWPx)=>{}',
+    desc: '栅格元素/栅格容器更改大小的事件（浏览器窗口或其他）'
   }
 ]
 </script>

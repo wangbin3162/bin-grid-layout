@@ -48,8 +48,6 @@ app.mount('#app')
 
 你可以直接导入组件并进行使用这种情况下，只有导入的组件才会被打包。
 
-如果你想知道如何按需引入主题和语言包，请参考 [按需引入](/docs/import-on-demand.html)。
-
 ```vue
 <template>
   <BGridLayout></BGridLayout>

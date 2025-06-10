@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <b-grid-layout
       v-model:layout="state.layout"
       :col-num="12"
@@ -10,8 +10,8 @@
       :use-css-transforms="true"
     >
       <b-grid-item
-        v-for="(item, index) in state.layout"
-        :key="index"
+        v-for="item in state.layout"
+        :key="item.i"
         :static="item.static"
         :x="item.x"
         :y="item.y"
@@ -19,7 +19,9 @@
         :h="item.h"
         :i="item.i"
       >
-        <span class="text">{{ itemTitle(item) }}</span>
+        <div class="item-box">
+          <span class="text">{{ itemTitle(item) }}</span>
+        </div>
       </b-grid-item>
     </b-grid-layout>
   </div>
@@ -66,35 +68,22 @@ function itemTitle(item) {
 </script>
 
 <style scoped>
-.bin-grid-layout {
-  background-color: #eee;
-}
-
-.bin-grid-item {
-  &:not(.vue-grid-placeholder) {
-    background: #ccc;
-    border: 1px solid black;
-  }
-  &.static {
-    background: #cce;
-  }
-  .text {
-    font-size: 24px;
-    text-align: center;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    height: 100%;
-    width: 100%;
-  }
-  .remove {
-    position: absolute;
-    right: 2px;
-    top: 0;
-    cursor: pointer;
+.container {
+  .item-box {
+    padding: 8px;
+    .text {
+      font-size: 18px;
+      text-align: center;
+      margin: auto;
+      height: 100%;
+      width: 100%;
+    }
+    .remove {
+      position: absolute;
+      right: 2px;
+      top: 0;
+      cursor: pointer;
+    }
   }
 }
 </style>

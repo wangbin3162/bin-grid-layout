@@ -1,0 +1,28 @@
+.bin-grid-layout {
+  --item-radius: 6px;
+  border-radius: var(--item-radius);
+  background-color: #fafafa;
+}
+
+.bin-grid-item {
+  &.vue-grid-placeholder {
+    background: green;
+    opacity: 0.2;
+    border-radius: var(--item-radius);
+    transition-duration: 200ms;
+    z-index: 2;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+  }
+  &:not(.vue-grid-placeholder) {
+    border-radius: var(--item-radius);
+    background-color: #ffffff;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+  &.static {
+    background: #cce;
+  }
+}

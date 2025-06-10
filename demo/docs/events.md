@@ -1,5 +1,5 @@
 ---
-title: 属性
+title: 事件
 ---
 
 <b-back-top></b-back-top>

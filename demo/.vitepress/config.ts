@@ -11,7 +11,7 @@ const linkBase = 'https://wangbin3162.github.io'
 export default defineConfig({
   base: baseUrl,
   outDir: '../docs',
-  title: 'bin-grid-layout',
+  title: 'Bin-Grid-Layout',
   description: 'A Compontnts Lib for Vue3',
   head: [
     [
@@ -24,7 +24,7 @@ export default defineConfig({
   ],
   themeConfig: {
     logo: '/logo.svg',
-    siteTitle: 'bin-grid-layout',
+    siteTitle: 'Bin-Grid-Layout',
     search: {
       provider: 'local'
     },
@@ -85,6 +85,9 @@ export default defineConfig({
       host: '0.0.0.0',
       port: 9004,
       open: true
+    },
+    ssr: {
+      noExternal: ['bin-ui-design']
     },
     resolve: {
       alias: {

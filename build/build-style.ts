@@ -6,7 +6,7 @@ import cleanCSS from 'gulp-clean-css'
 import { compRoot, styleRoot, output } from './util-path'
 
 // 复制字体包
-const copyFonts = () => src(`${styleRoot}/fonts/**`).pipe(dest(`${output}/fonts`))
+// const copyFonts = () => src(`${styleRoot}/fonts/**`).pipe(dest(`${output}/fonts`))
 
 /**
  * 全量打包
@@ -17,12 +17,12 @@ const buildFull = () =>
 /**
  * 通用类打包
  */
-const buildCommon = () =>
-  src(`${styleRoot}/common/*.css`)
-    .pipe(postcss())
-    .pipe(cleanCSS())
-    .pipe(autoprefixer())
-    .pipe(dest(`${output}/common`))
+// const buildCommon = () =>
+//   src(`${styleRoot}/common/*.css`)
+//     .pipe(postcss())
+//     .pipe(cleanCSS())
+//     .pipe(autoprefixer())
+//     .pipe(dest(`${output}/common`))
 
 /**
  * 单个组件的样式打包
@@ -34,4 +34,4 @@ const buildComponents = () =>
     .pipe(autoprefixer())
     .pipe(dest(`${output}/components`))
 
-export default series(buildFull, buildCommon, buildComponents, copyFonts)
+export default series(buildFull, buildComponents)

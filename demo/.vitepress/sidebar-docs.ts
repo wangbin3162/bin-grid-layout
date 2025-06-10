@@ -8,7 +8,7 @@ export default formatSidebar([
       { text: '用法', link: '/docs/useage' },
       { text: '属性', link: '/docs/props' },
       { text: '事件', link: '/docs/events' },
-
+      { text: '样式', link: '/docs/styles' },
       { text: '变更日志', link: '/docs/changelog' }
     ]
   }

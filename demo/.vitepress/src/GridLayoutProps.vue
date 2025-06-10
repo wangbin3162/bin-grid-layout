@@ -75,6 +75,13 @@ const data = [
     desc: '标识栅格中的元素是否可调整大小。'
   },
   {
+    prop: 'isBounded',
+    type: 'Boolean',
+    required: 'false',
+    default: 'false',
+    desc: '标识拖动只能限制在容器内。'
+  },
+  {
     prop: 'isMirrored',
     type: 'Boolean',
     required: 'false',
@@ -107,7 +114,14 @@ const data = [
     type: 'Boolean',
     required: 'false',
     default: 'true',
-    desc: '标识是否使用CSS属性 transition-property: transform;'
+    desc: '标识是否使用CSS属性 transition-property: transform;使用CSS3 translate代替position top/left。性能提高了约6倍'
+  },
+  {
+    prop: 'transformScale',
+    type: 'Number',
+    required: 'false',
+    default: '1',
+    desc: '如果ResponsiveReactGridLayout或ReactGridLayout的父DOM节点有“transform: scale(n)” css属性,我们应该设置比例系数，以避免在拖动时渲染伪影。'
   },
   {
     prop: 'responsive',
