@@ -8,7 +8,7 @@ title: 样式
 
 ## 默认样式
 
-组件提供一个默认样式，你如果你喜欢可以直接引入 `import 'bin-grid-layout/_styles/default.css'`
+组件提供一个默认样式，你如果你喜欢可以直接引入 `import 'bin-grid-layout/dist/styles/default.css'`
 
 <preview path="./demo/00-style.vue"></preview>
 

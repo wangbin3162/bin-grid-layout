@@ -30,7 +30,7 @@ export default defineConfig({
     },
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: '文档', link: '/docs/installation', activeMatch: '/docs/' },
+      { text: '文档', link: '/docs/introduction', activeMatch: '/docs/' },
       { text: '示例', link: '/components/01-basic', activeMatch: '/components/' },
       {
         text: '生态系统',
